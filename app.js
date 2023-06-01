@@ -22,9 +22,9 @@ function hava() {
     .then((response) => response.json())
     .then(function (data) {
       console.log(data.name);
-      if (data.sys.country == undefined) {
-        country.innerHTML = "Respublika tapılmadı";
-      } else if (data.name == undefined || data.sys.country == undefined) {
+      if (data.sys.country == undefined ) {
+        country.innerHTML = data.name ;
+      } else if (data.name == undefined && data.sys.country == undefined) {
         country.innerHTML = "Tapılmadı";
         png.innerHTML = ""
         png2.innerHTML = ""
