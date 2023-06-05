@@ -56,7 +56,7 @@
             box-shadow: 0 0 5px #000;
             text-shadow: 0 0 3px black;
             padding: 20px;
-            height: 30vh;
+            min-height: 30vh;
             margin-bottom: 20px;
             display: flex;
             flex-direction: column;
@@ -81,13 +81,29 @@
             /* margin-bottom: 20px; */
         }
 
-        .icon , .icon2 {
+        .icon,
+        .icon2 {
             background-size: cover;
         }
 
         .footer {
             font-size: 0.8em;
             color: #888;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .temperature {
+                font-size: 1.8em;
+            }
+            .icon , .icon2 {
+                font-size: 1.2em;
+            }
+            .location {
+                font-size: 1.2em;
+            }
+            .description{
+                font-size: 1.3em;
+            }
         }
     </style>
 </head>
@@ -97,7 +113,7 @@
         <h1>Hava Proqnozu</h1>
         <div style="margin-bottom: 20px;">
             <input type="text" placeholder="Şəhər daxil edin ..." id="searchCity">
-            <button  onclick="hava()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button onclick="hava()"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
 
         <div class="weather-card">
